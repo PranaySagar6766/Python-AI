@@ -1,0 +1,34 @@
+{% extends 'Baseclass.html' %}
+{% block body %}
+
+<div class="container py-5">
+  <div class="section-header animate-in">
+    <span class="section-label">Browse All</span>
+    <h2 class="section-title">Our Catalogue</h2>
+    <div class="section-divider"></div>
+  </div>
+
+  <div class="row g-4">
+    {% for book in books %}
+    <div class="col-md-4 animate-in" style="animation-delay:{{ loop.index * 0.05 }}s">
+      <div class="book-card">
+        <div class="book-cover">
+          <span class="book-cover-icon">📖</span>
+          <div class="book-cover-accent"></div>
+        </div>
+        <div class="book-body">
+          <div class="book-genre">Literature</div>
+          <a class="book-title-link" href="#">{{ book.title }}</a>
+          <p class="book-author">{{ book.author }}</p>
+          <div class="book-footer">
+            <span class="book-price">&#8377;{{ book.price }}</span>
+            <button class="btn-cart">+ Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock %}

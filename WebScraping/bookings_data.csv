@@ -1,0 +1,21 @@
+id,firstname,lastname,totalprice,depositpaid,checkin,checkout,additionalneeds
+739,John,Smith,111,True,2018-01-01,2019-01-01,Breakfast
+1240,John,Smith,111,True,2018-01-01,2019-01-01,Dinner
+3034,Josh,Allen,111,True,2018-01-01,2019-01-01,super bowls
+1011,John,Smith,111,True,2018-01-01,2019-01-01,Breakfast
+1536,John,Smith,111,True,2018-01-01,2019-01-01,Breakfast
+364,John,Smith,111,True,2018-01-01,2019-01-01,Breakfast
+2069,Josh,Allen,111,True,2018-01-01,2019-01-01,super bowls
+2749,John,Smith,111,True,2018-01-01,2019-01-01,Breakfast
+2678,John,Smith,111,True,2018-01-01,2019-01-01,Lunch
+1132,Josh,Allen,111,True,2018-01-01,2019-01-01,super bowls
+1662,John,Smith,111,True,2018-01-01,2019-01-01,Breakfast
+2850,John,Smith,111,True,2018-01-01,2019-01-01,Lunch
+886,Josh,Allen,111,True,2018-01-01,2019-01-01,super bowls
+1835,John,Smith,111,True,2018-01-01,2019-01-01,Breakfast
+2590,John,Smith,111,True,2018-01-01,2019-01-01,Breakfast
+2051,Josh,Allen,111,True,2018-01-01,2019-01-01,super bowls
+2793,Josh,Allen,111,True,2018-01-01,2019-01-01,superb owls
+1026,John,Smith,111,True,2018-01-01,2019-01-01,Breakfast
+2437,John,Smith,111,True,2018-01-01,2019-01-01,Breakfast
+2307,Josh,Allen,111,True,2018-01-01,2019-01-01,super bowls

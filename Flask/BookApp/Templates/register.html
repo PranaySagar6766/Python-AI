@@ -1,0 +1,75 @@
+{% extends 'Baseclass.html' %}
+{% block body %}
+
+<div class="container">
+  <div class="form-section animate-in">
+
+    <!-- Header -->
+    <div class="hero-eyebrow text-center" style="display: inline-block; margin: 0 auto 20px; position: relative; left: 50%; transform: translateX(-50%);">
+      ✦ Create Account
+    </div>
+    <h2 class="form-title">Join My Store</h2>
+    <p class="form-subtitle">Your next favourite book is waiting.</p>
+
+    <form method="POST" action="">
+      {{ form.hidden_tag() }}
+
+      <!-- Username -->
+      <label class="form-label">{{ form.username.label.text }}</label>
+      {% if form.username.errors %}
+        {{ form.username(class="form-control-dark is-invalid", placeholder="e.g. booklover_raj") }}
+        <div style="color: #c0392b; font-size: 0.78rem; margin-top: -14px; margin-bottom: 14px;">
+          {% for err in form.username.errors %}{{ err }}{% endfor %}
+        </div>
+      {% else %}
+        {{ form.username(class="form-control-dark", placeholder="e.g. booklover_raj") }}
+      {% endif %}
+
+      <!-- Email -->
+      <label class="form-label">{{ form.email.label.text }}</label>
+      {% if form.email.errors %}
+        {{ form.email(class="form-control-dark is-invalid", placeholder="you@email.com") }}
+        <div style="color: #c0392b; font-size: 0.78rem; margin-top: -14px; margin-bottom: 14px;">
+          {% for err in form.email.errors %}{{ err }}{% endfor %}
+        </div>
+      {% else %}
+        {{ form.email(class="form-control-dark", placeholder="you@email.com") }}
+      {% endif %}
+
+      <!-- Password -->
+      <label class="form-label">{{ form.password.label.text }}</label>
+      {% if form.password.errors %}
+        {{ form.password(class="form-control-dark is-invalid", placeholder="Min. 8 characters") }}
+        <div style="color: #c0392b; font-size: 0.78rem; margin-top: -14px; margin-bottom: 14px;">
+          {% for err in form.password.errors %}{{ err }}{% endfor %}
+        </div>
+      {% else %}
+        {{ form.password(class="form-control-dark", placeholder="Min. 8 characters") }}
+      {% endif %}
+
+      <!-- Confirm Password -->
+      <label class="form-label">{{ form.confirm_password.label.text }}</label>
+      {% if form.confirm_password.errors %}
+        {{ form.confirm_password(class="form-control-dark is-invalid", placeholder="Repeat password") }}
+        <div style="color: #c0392b; font-size: 0.78rem; margin-top: -14px; margin-bottom: 14px;">
+          {% for err in form.confirm_password.errors %}{{ err }}{% endfor %}
+        </div>
+      {% else %}
+        {{ form.confirm_password(class="form-control-dark", placeholder="Repeat password") }}
+      {% endif %}
+
+      {{ form.submit(class="btn-submit") }}
+    </form>
+
+    <!-- Sign In Link -->
+    <div style="text-align: center; margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--border-subtle);">
+      <p style="font-size: 0.85rem; color: var(--text-muted);">
+        Already have an account?
+        <a href="#">Sign In →</a>
+      </p>
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}

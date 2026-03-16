@@ -1,0 +1,89 @@
+  {% extends 'Baseclass.html' %}
+  {% block body %}
+
+    <!-- ===== HERO ===== -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-eyebrow">✦ New arrivals every week</div>
+        <h1 class="hero-title">
+          Stories that<br><em>move</em> the world
+        </h1>
+        <p class="hero-subtitle">
+          A curated collection of literature, fiction, and non-fiction for readers who demand the extraordinary.
+        </p>
+        <div class="hero-cta-group">
+          <a href="#books" class="btn-primary-gold">Browse Catalogue</a>
+          <a href="/about" class="btn-ghost">Our Story</a>
+        </div>
+        <div class="stats-bar">
+          <div class="stat-item"><span class="stat-number">12K+</span><span class="stat-label">Books</span></div>
+          <div class="stat-item"><span class="stat-number">340+</span><span class="stat-label">Authors</span></div>
+          <div class="stat-item"><span class="stat-number">98%</span><span class="stat-label">Happy Readers</span></div>
+          <div class="stat-item"><span class="stat-number">50+</span><span class="stat-label">Genres</span></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container pb-5" id="books">
+      <div class="row g-4">
+        <div class="col-lg-8">
+
+          <div class="featured-banner animate-in">
+            <div class="featured-label">✦ Editor's Pick</div>
+            <h2 class="featured-title">The Midnight Library</h2>
+            <p class="featured-author">by Matt Haig</p>
+            <p style="color:var(--text-muted);max-width:420px;font-size:0.9rem;margin-bottom:24px;">Between life and death there is a library, and within that library, the shelves go on forever...</p>
+            <a href="#" class="btn-primary-gold" style="font-size:0.78rem;">View Book →</a>
+          </div>
+
+          <div class="section-header animate-in delay-1">
+            <span class="section-label">Collection</span>
+            <h2 class="section-title">All Books</h2>
+            <div class="section-divider"></div>
+          </div>
+
+          <div class="row g-4">
+            {% for book in books %}
+            <div class="col-md-6 animate-in" style="animation-delay:{{ loop.index * 0.05 }}s">
+              <div class="book-card">
+                <div class="book-cover">
+                  <span class="book-cover-icon">📖</span>
+                  <div class="book-cover-accent"></div>
+                </div>
+                <div class="book-body">
+                  <div class="book-genre">Literature</div>
+                  <a class="book-title-link" href="#">{{ book.title }}</a>
+                  <p class="book-author">{{ book.author}}</p>
+                  <div class="book-footer">
+                    <span class="book-price">&#8377;{{ book.price | int }}</span>
+                    <button class="btn-cart">+ Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+
+        </div>
+
+        <div class="col-lg-4">
+          <div class="sidebar-card animate-in delay-2">
+            <div class="sidebar-title">My Store</div>
+            <div class="sidebar-subtitle">Quick Links</div>
+            <a href="#" class="quick-link" style="text-decoration:none;"><div class="quick-link-icon">🆕</div><span>Latest Arrivals</span><span class="tag-new ms-auto">New</span></a>
+            <a href="#" class="quick-link" style="text-decoration:none;"><div class="quick-link-icon">📚</div><span>Categories</span></a>
+            <a href="#" class="quick-link" style="text-decoration:none;"><div class="quick-link-icon">⭐</div><span>Best Sellers</span></a>
+            <a href="#" class="quick-link" style="text-decoration:none;"><div class="quick-link-icon">🎁</div><span>Gift Cards</span></a>
+            <a href="/about" class="quick-link" style="text-decoration:none;"><div class="quick-link-icon">ℹ️</div><span>About Us</span></a>
+            <div style="margin-top:28px;padding-top:20px;border-top:1px solid var(--border-subtle);">
+              <p style="font-size:0.75rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-dim);margin-bottom:10px;">Newsletter</p>
+              <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:14px;">Get weekly recommendations in your inbox.</p>
+              <input type="email" placeholder="your@email.com" class="form-control-dark" style="margin-bottom:10px;">
+              <button class="btn-submit" style="padding:10px;font-size:0.75rem;">Subscribe</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {% endblock %}
